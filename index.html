@@ -6,104 +6,134 @@
 	https://risalafountain.github.io/portfolio/
 -->
 <html>
-	<head>
-		<title>Risa La Fountain</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/rlf.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Risa La Fountain</a></h1>
-					<p>Full Stack Web Developer</p>
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="#one" class="active">About</a></li>
-						<li><a href="#two">Things I Can Do </a></li>
-						<li><a href="#three">A Few Accomplishments</a></li>
-						<li><a href="#four">Contact</a></li>
-					</ul>
-				</nav>
-				<footer>
-					<ul class="icons">
-						<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
-						<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
-						<!-- <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-				</footer>
-			</section>
+<head>
+	<title>Risa La Fountain</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "q9MGEOxqqN1hZbhag",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_n283uwd', 'template_lvx6fte', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+	
+	
+</head>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+<body class="is-preload">
 
-				<!-- Main -->
-					<div id="main">
+	<!-- Header -->
+	<section id="header">
+		<header>
+			<span class="image avatar"><img src="images/rlf.jpg" alt="" /></span>
+			<h1 id="logo"><a href="#">Risa La Fountain</a></h1>
+			<p>Full Stack Web Developer</p>
+		</header>
+		<nav id="nav">
+			<ul>
+				<li><a href="#one" class="active">About</a></li>
+				<li><a href="#two">Things I Can Do </a></li>
+				<li><a href="#three">A Few Accomplishments</a></li>
+				<li><a href="#four">Contact</a></li>
+			</ul>
+		</nav>
+		<footer>
+			<ul class="icons">
+				<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li> -->
+				<!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li> -->
+				<!-- <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
+				<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+				<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+		</footer>
+	</section>
 
-						<!-- One -->
-							<section id="one">
-								<div class="image main" data-position="center">
-									<img src="images/banner.gif" alt="" />
-								</div>
-								<div class="container">
-									<header class="major">
-										<h2>About Me</h2>
-										<p>Hi there! I'm a full-stack web developer who loves building awesome websites from start to finish. Explore my portfolio to view some of my work!
-											<br>
-											<!-- <ul> 
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- One -->
+			<section id="one">
+				<div class="image main" data-position="center">
+					<img src="images/banner.gif" alt="" />
+				</div>
+				<div class="container">
+					<header class="major">
+						<h2>About Me</h2>
+						<p>Hi there! I'm a full-stack web developer who loves building awesome websites from start to
+							finish. Explore my portfolio to view some of my work!
+							<br>
+							<!-- <ul> 
 												<li>Bilingual in English and Spanish</li>
 												<li>Team Player</li>
 												<li>Goal Oriented</li>
 												<li>Globally Minded</li>
 											</ul>
 												I enjoy reading books, learning new things, and welcome challenges! -->
-										</p>
-									</header>
-									<!-- <p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum.</p> -->
-								</div>
-							</section>
+						</p>
+					</header>
+					<!-- <p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum.</p> -->
+				</div>
+			</section>
 
-						<!-- Two -->
-							<section id="two">
-								<div class="container">
-									<h3>Things I Can Do</h3>
-									<!-- <p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer lorem ipsum dolor sit amet.</p> -->
-									<ul class="feature-icons">
-										<li class="icon solid fa-code">Express</li>
-										<li class="icon solid fa-code">HTML</li>
-										<li class="icon solid fa-code">React</li>
-										<li class="icon solid fa-code">JavaScript</li>
-										<li class="icon solid fa-code">CSS</li>
-										<li class="icon solid fa-code">Node.js</li>
-										<li class="icon solid fa-code">MongoDB</li>
-										<li class="icon solid fa-code">JSON</li>
-									</ul>
-								</div>
-							</section>
+			<!-- Two -->
+			<section id="two">
+				<div class="container">
+					<h3>Things I Can Do</h3>
+					<!-- <p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer lorem ipsum dolor sit amet.</p> -->
+					<ul class="feature-icons">
+						<li class="icon solid fa-code">Express</li>
+						<li class="icon solid fa-code">HTML</li>
+						<li class="icon solid fa-code">React</li>
+						<li class="icon solid fa-code">JavaScript</li>
+						<li class="icon solid fa-code">CSS</li>
+						<li class="icon solid fa-code">Node.js</li>
+						<li class="icon solid fa-code">MongoDB</li>
+						<li class="icon solid fa-code">JSON</li>
+					</ul>
+				</div>
+			</section>
 
-						<!-- Three -->
-							<section id="three">
-								<div class="container">
-									<h3>A Few Accomplishments</h3>
-									<!-- <p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p> -->
-									<div class="features">
-										<article>
-											<a href="#" class="image"><img src="images/toDo.png" alt="" /></a>
-											<div class="inner">
-												<h4>LOTR Themed To Do App</h4>
-												<p>A user-friendly To Do App that allows the user to create, edit and delete new To Dos and save favorite tasks. A helpful resources tab provides links for assisting in household cleaning.</p>
-												<a>View Live</a>
-												<a href="https://github.com/risalafountain/assignments/tree/main/level-5/toDo-capstone">View Code</a>
+			<!-- Three -->
+			<section id="three">
+				<div class="container">
+					<h3>A Few Accomplishments</h3>
+					<!-- <p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p> -->
+					<div class="features">
+						<article>
+							<a href="#" class="image"><img src="images/toDo.png" alt="" /></a>
+							<div class="inner">
+								<h4>Fellowship of the Things</h4>
+								<p>A user-friendly To Do App that allows the user to create, edit and delete new To Dos. 
+									User can also save favorite tasks. A helpful resources tab provides links for assisting in
+									household cleaning for people of all ages!</p>
+								<a>View Live</a>
+								<a href="https://github.com/risalafountain/lotr-task-management.git">View Code</a>
 
-											</div>
-										</article>
-										<!-- <article>
+							</div>
+						</article>
+						<!-- <article>
 											<a href="#" class="image"><img src="images/rtv.jpeg" alt="" /></a>
 											<div class="inner">
 												<h4>Rock The Vote App </h4>
@@ -113,44 +143,62 @@
 
 											</div>
 										</article> -->
-										<article>
-											<a href="#" class="image"><img src="images/mtg.png" alt="" /></a>
-											<div class="inner">
-												<h4>Magic the Gathering Card List</h4>
-												<p>An intuitive design that provides information on common Magic the Gathering cards which allows users to save and view their favorites.</p>
-												
-												<a>View Live</a>
-												<a href ='https://github.com/risalafountain/assignments/tree/main/334-lvl4-capstone'>View Code</a>
-											</div>
-										</article>
-									</div>
-								</div>
-							</section>
+						<article>
+							<a href="#" class="image"><img src="images/mtg.png" alt="" /></a>
+							<div class="inner">
+								<h4>Magic the Gathering Card List</h4>
+								<p>An intuitive design that provides information on common Magic the Gathering cards
+									which allows a user to save and view their favorites.</p>
 
-						<!-- Four -->
-							<section id="four">
-								<div class="container">
-									<h3>Contact Me</h3>
-									<!-- <p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p> -->
-									<form method="post" action="#">
-										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
-											<div class="col-12">
-												<ul class="actions">
-													<li><input type="submit" class="primary" value="Send Message" /></li>
-													<li><input type="reset" value="Reset Form" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
-								</div>
-							</section>
+								<a>View Live</a>
+								<a href='https://github.com/risalafountain/mtg-cards.git'>View Code</a>
+							</div>
+						</article>
+						<article>
+							<a href="#" class="image"><img src="images/sticky-notes.png" alt="" /></a>
+							<div class="inner">
+								<h4>Sticky Notes</h4>
+								<p>A user-friendly sticky note application designed to enhance productivity and
+									organization with features for creating, managing, and prioritizing notes in a fun
+									sticky note format.
+								</p>
+								<a>View Live</a>
+								<a href="https://github.com/risalafountain/sticky-note-app.git">View Code</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
 
-						<!-- Five -->
-						<!--
+			<!-- Four -->
+			<section id="four">
+				<div class="container">
+
+					<h3>Contact Me</h3>
+					<!-- <p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p> -->
+					<form id ="contact-form" method="post" action="#">
+						<div class="row gtr-uniform">
+							<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name"
+									placeholder="Name" /></div>
+							<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email"
+									placeholder="Email" /></div>
+							<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" />
+							</div>
+							<div class="col-12"><textarea name="message" id="message" placeholder="Message"
+									rows="6"></textarea></div>
+							<div class="col-12">
+								<ul class="actions">
+									<li><input type="submit" class="primary" value="Send Message" /></li>
+									<li><input type="reset" value="Reset Form" /></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+
+			<!-- Five -->
+			<!--
 							<section id="five">
 								<div class="container">
 									<h3>Elements</h3>
@@ -480,27 +528,29 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							</section>
 						-->
 
-					</div>
+		</div>
 
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
-
+		<!-- Footer -->
+		<section id="footer">
+			<div class="container">
+				<ul class="copyright">
+					<li>&copy; Untitled. All rights reserved.</li>
+					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
 			</div>
+		</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	</div>
 
-	</body>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
